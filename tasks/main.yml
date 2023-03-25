@@ -1,0 +1,15 @@
+---
+
+- block:
+  - name: Init Configuration
+    ansible.builtin.import_tasks: init.yml
+    tags: init
+  - name: Install docker docker-compose
+    ansible.builtin.import_tasks: install.yml
+    tags: install
+  - name: Generate Configuration
+    ansible.builtin.import_tasks: config.yml
+    tags: config
+  - name: Service Configuration
+    ansible.builtin.import_tasks: service.yml
+    tags: service
