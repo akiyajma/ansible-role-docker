@@ -7,7 +7,6 @@
     mode: '0644'
     force: true
   register: add_repository_key
-  ignore_errors: "{{ docker_apt_ignore_key_error }}"
   when: docker_add_repo
 
 - name: Add Docker repository.
